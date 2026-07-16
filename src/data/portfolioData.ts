@@ -198,58 +198,257 @@ export const PROJECTS: Project[] = [
     }
   },
   {
-    id: "growth",
-    title: "Airtribe Growth & Retention Strategy",
-    subtitle: "High-Engagement User Onboarding & Retention Mechanics",
-    category: "Growth & Retention",
-    tags: ["AARRR Funnel", "User Onboarding", "Streaks", "Retention Engine"],
-    brief: "A complete growth study mapping out the activation funnel of a modern B2C product. Designed user streaks, context-rich push notifications, and personalized reward templates to curb Day-3 churn.",
+    id: "stayfit",
+    title: "VitaFit: StayFit+ Gamification & Community",
+    subtitle: "Product Requirements Document (PRD) — Retention Initiative",
+    category: "Product Strategy",
+    tags: ["PRD Writing", "Gamification", "Habit Loops", "Retention"],
+    brief: "A high-impact Product Requirements Document addressing a retention crisis on a health & fitness platform through a tightly integrated Gamification Engine and a Community Challenges layer.",
     deliverables: [
-      "Onboarding Flow Audit & Optimization Blueprint",
-      "High-Conversion Habit Loop Specification",
-      "Smart Push Notification Sequence & Trigger Matrix"
+      "Gamification & Streak Mechanics Spec",
+      "Community Challenges Design Outline",
+      "30-Day Retention Target Model (39% → 52%+)"
     ],
+    docUrl: "#stayfit-pdf-sim",
     docMockup: {
-      problemStatement: "B2C mobile and web applications lose up to 55% of their signed-up users on Day 1, and 80% within the first week, due to complex onboarding flows that fail to deliver the 'Aha!' moment fast enough.",
-      targetUser: "First-time sign-ups who are highly distracted, testing multiple products, and have low patience for setup overhead.",
+      problemStatement: "VitaFit is facing an acute retention crisis. Users sign up, complete a handful of sessions, then quietly disappear due to loss of motivation (41%) and the absence of any real human connection (28%). 30-day user retention has collapsed from 58% to 39% over two quarters, putting approximately Rs. 2.1 Cr ARR at risk.",
+      targetUser: "Working Professionals & Gen Z (18-35 years old). Alex, 28, is a time-poor but goal-driven consultant who needs clear progress markers, habit streaks, and community accountability to stay committed.",
       userInsights: [
-        "The peak dropoff occurs when users are forced to fill out long profiles before seeing any product value.",
-        "Interactive walk-throughs that let users 'do' instead of 'read' improve activation by 35%.",
-        "Introducing visual progress bars during onboarding creates an completion bias (Zeigarnik Effect)."
+        "Internal session telemetry shows the median active user completes just 1.4 sessions per week (industry benchmark is 3+).",
+        "Only 12% of users have ever interacted with another user or instructor on the platform.",
+        "Competitive benchmarking confirms platforms with social and gamification features achieve 2.3x higher 90-day retention."
       ],
       keyFeatures: [
         {
-          name: "Progressive Profiling Engine",
-          description: "Defers optional configuration questions into post-activation states, allowing users to experience the core product in 2 clicks.",
-          impact: "Instantly increases onboarding completion by 28%."
+          name: "Gamification & Rewards Engine",
+          description: "XP points earned per completed session accumulating toward weekly milestones, a 7-day consecutive streak counter with bonus tiers, a profile badge wall, and VitaCoins redeemable in a Reward Store for partner discounts.",
+          impact: "Triggers immediate dopamine rewards, successfully addressing the 'motivation fades fast' pain point."
         },
         {
-          name: "Dynamic Habit Streak Visualizer",
-          description: "A neon-glowing streak tracker that celebrates consecutive action days, backed by a micro-reward animation.",
-          impact: "Increases Day-7 and Day-14 retention by triggering completion motivation."
-        },
-        {
-          name: "Smart Re-Engagement Trigger Matrix",
-          description: "An automated trigger framework sending context-aware, value-first push notifications based on user inactivity periods.",
-          impact: "Recovers 15% of dormant users before they churn completely."
+          name: "Community Challenges & Social Layer",
+          description: "A dedicated Challenge Hub tab for weekly/monthly team challenges (e.g. '21-Day Yoga Reset'), social feed with emoji reactions, instructor weekly check-in videos, auto-celebration screens, and smart re-challenge CTAs.",
+          impact: "Fosters team accountability and peer encouragement to increase weekly session frequency."
         }
       ],
       successMetrics: [
-        { metric: "User Activation Rate", target: "+30%", explanation: "Percentage of signups who complete a core value action on Day 1." },
-        { metric: "Day-7 User Retention", target: "45%", explanation: "Stabilizes the retention curve early in the customer lifecycle." },
-        { metric: "Streak Continuation Rate", target: "62%", explanation: "Measures the power of gamified streaks in driving consecutive daily active usage." }
+        { metric: "30-Day User Retention Rate", target: "39% → 52%+", explanation: "Our North Star metric, projected to recover ~Rs. 1.5 Cr in ARR at target within Month 3." },
+        { metric: "Completed Sessions / User / Week", target: "1.4 → 2.5+", explanation: "Weekly workout session frequency uplift, closing the gap to the 3.0+ industry benchmark by Month 2." },
+        { metric: "Challenge Participation Rate", target: "25%+ MAU", explanation: "Tracks immediate adoption and engagement in the newly deployed Community Challenge Hub." }
       ],
       gtmStrategy: [
-        "Implement A/B tests on onboarding steps to identify critical dropoff nodes.",
-        "Launch a '10-Day Consistent Habit' reward campaign offering unlockable premium badges.",
-        "Utilize event tracking in Amplitude to isolate high-retaining user cohorts."
+        "Phase 0 — Research (Weeks 1-2): Conduct 30 qualitative user interviews to finalize the coin economy mechanics, XP formulas, and challenge formats.",
+        "Phase 1 — Gamification MVP (Weeks 3-7): Ship XP and streak engine as an A/B test to 10% of users. Focus on profile badge and simple home streak card. Gate: Day-7 retention lift of 5pp+ to proceed.",
+        "Phase 2 — Community Beta (Weeks 7-13): Roll out Challenge Hub to 25% of users with an instructor-led pilot challenge and mid-beta metrics review at Week 13.",
+        "Phase 3 — GA Launch (Weeks 14-19): Full rollout of the push notification layer and VitaCoins Reward Store with targeted App Store updates."
+      ]
+    }
+  },
+  {
+    id: "zepto",
+    title: "Zepto: Growth Strategy to Increase AOV",
+    subtitle: "Basket-Building & Average Order Value (AOV) Optimization",
+    category: "Growth & Retention",
+    tags: ["AOV Lifts", "RICE Scoring", "Growth Hacks", "Nudges"],
+    brief: "Comprehensive product growth strategy analyzing Zepto's checkout friction and shopper types. Proposed cart add-on nudges, occasion-based bundling, and tiered value-stack loyalty programs to push AOV past Rs.400+.",
+    deliverables: [
+      "Four Shopper Typology & Sign Profiles",
+      "5 Core Basket-Building Blockers Identification",
+      "RICE Prioritized Product Roadmap (Score 473)"
+    ],
+    docUrl: "#zepto-pdf-sim",
+    docMockup: {
+      problemStatement: "Zepto's average basket size sits at around Rs. 260–300, far below the target of Rs. 400+. 42% of orders are under Rs. 200, 38% of users stop immediately once they cross the free delivery threshold, and 55% only ever reorder the same products.",
+      targetUser: "Threshold Chasers (35% users) & Urgency Shoppers (27% users). Users who treat the free delivery limit as a stop signal or buy 1-2 items quickly under 90 seconds and leave.",
+      userInsights: [
+        "Users rely on quick commerce for urgent, small purchases rather than full-family grocery shopping.",
+        "The current search-to-checkout flow is a 'one-way tunnel' with zero cross-sell triggers or related product recommendations.",
+        "Reorder button shortcuts bypass the homepage, category tiles, and personalized suggestions, keeping users in a closed loop."
+      ],
+      keyFeatures: [
+        {
+          name: "Cart Contextual Add-on Nudges",
+          description: "Instantly surfaces 1–2 low-cost, highly relevant micro add-ons (e.g. 'Add Coke for Rs.30' when Chips is added) inline within the cart update confirmation to trigger impulse purchases.",
+          impact: "Achieved highest RICE score (473) with extremely low effort (2 weeks), yielding a +Rs.20-80 AOV uplift."
+        },
+        {
+          name: "Bundling & Combo Offers",
+          description: "Curated, occasion-based bundles (e.g., 'Breakfast Bundle' or 'Make Butter Chicken Tonight') that combine multiple individual SKUs into a single-tap add-to-cart kit.",
+          impact: "Reduces comparison fatigue and naturally expands basket size, boosting AOV by +Rs.100-150."
+        },
+        {
+          name: "Value Stack Tiered Loyalty Program",
+          description: "A tiered AOV reward program: Silver (Rs. 400+, cashback), Gold (Rs. 600+, priority 8-min delivery), and Platinum (Rs. 900+, exclusive items). Includes a real-time 'You are Rs.X from Gold' cart tracker.",
+          impact: "Directly addresses Explorer Builders (15% users), leveraging loss aversion to drive +Rs.200-500 AOV uplift."
+        }
+      ],
+      successMetrics: [
+        { metric: "Average Order Value (AOV)", target: "Rs. 400+", explanation: "Substantial lift from the baseline of Rs.260-300 across all active customer segments." },
+        { metric: "Nudge Attach Rate", target: "30% – 40%", explanation: "Tracks user conversion on inline contextual cart add-on micro-recommendations." },
+        { metric: "Threshold Overshoot Rate", target: ">50%", explanation: "Percentage of Threshold Chaser orders that cross the Rs.200 boundary after implementation." }
+      ],
+      gtmStrategy: [
+        "Step 1: Ship high-RICE Cart Add-On Nudges first (estimated 2 weeks effort) to capture immediate low-hanging conversions.",
+        "Step 2: Roll out Contextual Recommendations and co-purchase pattern matching on Cart & Product Detail pages.",
+        "Step 3: Develop Curated Occasion Bundling and pilot them with Urgency Shoppers during high-traffic weekend slots.",
+        "Step 4: Build the Tiered Value-Stack Loyalty Program and integrate progress counters directly on the cart page."
+      ]
+    }
+  },
+  {
+    id: "learning-system",
+    title: "Personalised Learning Recommendation Engine",
+    subtitle: "Core System Design & Product Brief",
+    category: "System Design",
+    tags: ["Personalization", "Adaptive Learning", "GDPR", "Privacy-First"],
+    brief: "End-to-end system design for an online education recommendation engine, balancing high-latency personalization (+25% engagement) with strict GDPR compliance and low-latency microservices.",
+    deliverables: [
+      "User Stories for Learners, Instructors, and Admins",
+      "Privacy-First personalization Trade-off Analysis",
+      "Low-Latency Microservices Data Architecture Map"
+    ],
+    docUrl: "#learning-pdf-sim",
+    docMockup: {
+      problemStatement: "Online learners face search friction and lack adaptive paths, causing low completion rates. The platform must implement a recommendation system to drive +25% engagement and +30% course completion while keeping latency under 200ms and adhering to strict GDPR laws.",
+      targetUser: "Students seeking skill transitions, instructors tagging courses with metadata, and platform admins optimizing weight algorithms.",
+      userInsights: [
+        "Peak drop-off occurs during long onboarding profile questions; users prefer immediate progressive, opt-in profiling.",
+        "Instructors require direct visibility into course drop-off points and student sentiment trends to iterate on materials.",
+        "WCAG 2.1 Level AA conformance is required to ensure usability for students with assistive technologies."
+      ],
+      keyFeatures: [
+        {
+          name: "Adaptive Learning Paths",
+          description: "Generates dynamic, sequenced curriculum paths that automatically adjust and route based on user milestone performance.",
+          impact: "Keeps learners motivated and supported, directly boosting course completion rates."
+        },
+        {
+          name: "Privacy-First Personalisation Model",
+          description: "Two-tier model: default collaborative-filtering using anonymized cohort behavior, and opt-in personalized tracking with a transparent GDPR 'My Data' dashboard.",
+          impact: "Achieves full GDPR compliance, building immediate user trust while retaining maximum relevance."
+        },
+        {
+          name: "Instructor Analytics & AI Gap suggestions",
+          description: "Analytics panel tracking enrollment, watch-time, and quiz scores, paired with AI-surfaced suggestions on topics with high learner demand but low course supply.",
+          impact: "Empowers instructors to improve course quality and expand catalog value."
+        }
+      ],
+      successMetrics: [
+        { metric: "Platform User Engagement", target: "+25% lift", explanation: "Uplift in daily active learning hours and interactive session durations." },
+        { metric: "Course Completion Rate", target: "+30% lift", explanation: "Directly improves graduation rates and lifetime customer value." },
+        { metric: "API Response Time (95th %ile)", target: "<200ms", explanation: "Guarantees a seamless, non-blocking browsing experience for up to 10k concurrent users." }
+      ],
+      gtmStrategy: [
+        "Step 1: Coordinate with the engineering team to tag the existing course catalog with skills and difficulty metadata.",
+        "Step 2: Deploy the baseline Collaborative-Filtering recommendation model as the default zero-tracking option.",
+        "Step 3: Launch the opt-in Personalized Tracking layer paired with the transparent GDPR 'My Data' consent dashboard.",
+        "Step 4: Roll out the Instructor Analytics Dashboard and AI content gap suggestions to the pilot creator cohort."
+      ]
+    }
+  },
+  {
+    id: "twitter-growth",
+    title: "Twitter / X Funnel & Growth Strategy",
+    subtitle: "AARRR Funnel Optimization & Feature Roadmap",
+    category: "Growth & Retention",
+    tags: ["AARRR Funnel", "Onboarding", "Referral Loops", "Virality"],
+    brief: "Funnel analysis of Twitter/X mapping leaks across Acquisition, Activation, Retention, and Revenue. Structured E1 Smart Onboarding, E2 Communities 2.0, and E3 Referral rewards.",
+    deliverables: [
+      "AARRR Funnel Metrics & Conversion Mapping",
+      "Activation 'Aha Moment' Specification",
+      "Prioritized Epics Roadmap (E1 – E4)"
+    ],
+    docUrl: "#twitter-pdf-sim",
+    docMockup: {
+      problemStatement: "With over 40% estimated Day 1 churn, Twitter/X suffers from a critical cold-start relevance leak. High-profile trends drive massive acquisition, but weak non-logged-in paywalls and political default feeds cause immediate uninstalls, leaving substantial retention and premium subscription revenue on the table.",
+      targetUser: "Newly acquired casual visitors and niche interest group members who feel overwhelmed or isolated by the massive public square.",
+      userInsights: [
+        "Users who follow 30+ accounts in their first week retain at 3x the rate of those who follow fewer than 5.",
+        "App Store reviews cite toxic default feeds and 'cannot see anything without logging in' as primary reasons for quitting.",
+        "The platform has zero formal referral programs, neglecting a massive organic growth channel."
+      ],
+      keyFeatures: [
+        {
+          name: "E1: Smart Onboarding Wizard",
+          description: "A redesigned, 5-step dynamic onboarding flow that asks for granular topics (e.g. 'NBA' instead of 'Sports'), presents category preview tweets, and imports contacts with animated progress.",
+          impact: "Directly targets Day-1 retention, boosting activation rates by 15-20%."
+        },
+        {
+          name: "E3: Referral Rewards Programme",
+          description: "Incentivized viral loop tracking unique referral codes. Successful referrals unlock 1 week of X Premium or creator boost credits, supported by automated shareable 'invite cards'.",
+          impact: "Drives cheap customer acquisition, boosting monthly sign-ups by 10-18%."
+        },
+        {
+          name: "E4: Premium Lite Tier ($3/mo)",
+          description: "A low-friction entry tier offering ad-free mobile browsing, priority reply ranking, and advanced bookmarking without the verified checkmark.",
+          impact: "Captures price-sensitive users, expanding the premium subscriber base by 30-50%."
+        }
+      ],
+      successMetrics: [
+        { metric: "Day 1 User Retention", target: "+15% to 20%", explanation: "Ensured by matching user onboarding interests directly with early timeline feeds." },
+        { metric: "Follow Depth (Signup)", target: "12+ accounts", explanation: "Increases interest graph precision and feeds the recommendation algorithm." },
+        { metric: "Premium Subscriber WAU", target: "3.0% → 4.5%", explanation: "Driven by the low-barrier $3 Premium Lite conversion tier." }
+      ],
+      gtmStrategy: [
+        "Step 1: Deploy the E1 Smart Onboarding Wizard immediately to plug the primary cold-start funnel leak.",
+        "Step 2: Launch the E3 Referral Rewards Programme in parallel as a low-effort, fast-ROI MVP.",
+        "Step 3: Scale Communities 2.0 and rollout the Premium Lite Tier once retention stabilizes."
+      ]
+    }
+  },
+  {
+    id: "zomato-strategy",
+    title: "Zomato CY2026 Product Strategy & OKRs",
+    subtitle: "Retention-First Engagement & Habit Blueprint",
+    category: "Product Strategy",
+    tags: ["OKRs", "Funnel Drop-off", "Cohort Analysis", "Retention"],
+    brief: "Corporate growth blueprint designed to establish Zomato as the default daily food companion for urban India. Targets a 30-day retention lift (35% → 55%) using cohort-specific hypotheses.",
+    deliverables: [
+      "CY2026 Objective & Key Results Framework",
+      "7-Stage Food Delivery Funnel Drop-off Study",
+      "Zomato Daily & Gold 2.0 Initiative Matrix"
+    ],
+    docUrl: "#zomato-pdf-sim",
+    docMockup: {
+      problemStatement: "Zomato needs to transition from an occasional weekend delivery treat to a daily food habit. The primary challenge is a ~60% churn rate after the first order, high drop-off from Cart Creation to Checkout (38% → 28%), and low perceived weekday value.",
+      targetUser: "New Users (less than 3 orders) and Low-Frequency weekday diners in urban metros.",
+      userInsights: [
+        "New users churn rapidly due to a generic onboarding experience with no taste profile building.",
+        "Unexpected delivery fees at the checkout screen cause a 26% cart abandonment shock.",
+        "Low-frequency users default to cooking-at-home on weekdays due to lack of healthy, affordable combos."
+      ],
+      keyFeatures: [
+        {
+          name: "Zomato Daily (AI Meal Planner)",
+          description: "An AI-personalized weekly meal planner matching user taste profiles, offering automated pre-scheduling and subscription-based office lunch pricing.",
+          impact: "Locks in recurring order behavior, driving weekly frequency from 2.5x to 3.5x."
+        },
+        {
+          name: "Gold 2.0 Loyalty Program",
+          description: "Revamped tiered loyalty focusing on streak-based rewards, weekday-exclusive perks, and priority delivery.",
+          impact: "Increases high-margin cohort stickiness and incentivizes weekday ordering."
+        },
+        {
+          name: "Upfront Fee Transparency & Smart Combos",
+          description: "Displays delivery fee estimates directly on the restaurant card before cart creation, and groups single items into 'Weekday Combo Deals'.",
+          impact: "Cures cart-to-checkout abandonment and accelerates order placement speed."
+        }
+      ],
+      successMetrics: [
+        { metric: "30-Day User Retention", target: "35% → 55%", explanation: "Zomato's CY2026 North Star metric, proving users found lasting daily utility." },
+        { metric: "Order Frequency", target: "2.5x → 3.5x/mo", explanation: "Driven by office subscriptions and automated dinner reminder nudges." },
+        { metric: "2nd Order Velocity", target: "14d → 7d", explanation: "Locks in new cohorts through post-delivery 'Order Tomorrow' prompts." }
+      ],
+      gtmStrategy: [
+        "Step 1: Implement Upfront Fee Transparency and Taste Quiz onboarding immediately to capture easy wins.",
+        "Step 2: Introduce 'Weekday Combo Deals' exclusively on Monday-Friday lunch slots to target low-frequency users.",
+        "Step 3: Roll out Gold 2.0 Loyalty tier and Zomato Daily to power habit-formation cycles."
       ]
     }
   },
   {
     id: "adoption",
     title: "ARC Service Module Feature Adoption Plan",
-    subtitle: "Tekion ARC-Inspired SaaS Feature Optimization",
+    subtitle: "Tekion ARC-Inspired B2B SaaS Feature Optimization",
     category: "Feature Adoption",
     tags: ["SaaS Optimization", "B2B Workflows", "Dealer Operations", "PRD Review"],
     brief: "Applying deep Automotive Retail Cloud (ARC) insights to structure a seamless, high-adoption upgrade path for dealer workshop schedulers, resolving complex desktop-mobile handoffs.",
@@ -280,7 +479,7 @@ export const PROJECTS: Project[] = [
         {
           name: "Tap-to-Sign Mobile UAT/UAC",
           description: "Integrated digital consent forms on tablet screens for instant customer approval on additional service recommendations.",
-          impact: "Drastically boosts upsell approval rates by 40%."
+          impact: "Drastically boosts upsell approval rates by 40."
         }
       ],
       successMetrics: [
@@ -341,55 +540,6 @@ export const PROJECTS: Project[] = [
         "Incorporate analytics widgets directly into the primary dealer manager dashboard home screen.",
         "Schedule automated daily PDF email digests for senior dealership leadership.",
         "Run interactive, gamified feedback loops with technicians on high efficiency ratings."
-      ]
-    }
-  },
-  {
-    id: "monetisation",
-    title: "GymBuddy Tiered Subscription Strategy",
-    subtitle: "SaaS Monetization and Upsell Optimization",
-    category: "Monetisation",
-    tags: ["Pricing Tiers", "Value Mapping", "Upsell Models", "MRR Strategy"],
-    brief: "A rigorous pricing and packaging study for GymBuddy. Structured free trial boundaries, Premium tier pricing anchors, and Elite coaching upsells based on user willingness-to-pay.",
-    deliverables: [
-      "Three-Tier Pricing Matrix and Value Map",
-      "Free-to-Paid Conversion Funnel Specification",
-      "Enterprise/Gym Partner Upsell Framework"
-    ],
-    docMockup: {
-      problemStatement: "B2C fitness apps experience massive churn because they employ uniform, aggressive paywalls that block user value early on. Without a clear value-to-cost mapping, conversion rates stay stagnant under 2%.",
-      targetUser: "Hobbyist gym-goers ready to invest in structured fitness coaching but hesitant to pay high upfront annual commitments.",
-      userInsights: [
-        "Users are highly willing to pay for direct human feedback (trainer form reviews) but find standard static app content overpriced.",
-        "Interactive AI features (like custom daily constructors) act as high-value triggers for subscription conversion.",
-        "Monthly recurring subscriptions with a 'cancel anytime' trial outperform annual-only commitments by 4x."
-      ],
-      keyFeatures: [
-        {
-          name: "AI Personal Trainer Paywall Anchor",
-          description: "Positions a mid-level 'AI Pro' tier ($9.99/mo) with unlimited AI workout scheduling right alongside an expensive 'Human Coach' tier ($49.99/mo).",
-          impact: "Leverages pricing decoy effects to maximize AI-Pro signup volume."
-        },
-        {
-          name: "Usage-Based Premium Gating",
-          description: "Provides free users with 3 free AI-constructed workouts per month, then smoothly initiates a conversion modal to unlock unlimited access.",
-          impact: "Allows users to realize value before encountering payment hurdles."
-        },
-        {
-          name: "Group Fitness Family Add-on",
-          description: "Enables individual subscribers to add a gym buddy to their account for an extra $4.99/mo, enabling shared motivation loops.",
-          impact: "Boosts expansion revenue and organic virality."
-        }
-      ],
-      successMetrics: [
-        { metric: "Free-to-Paid Subscription Conversion", target: "5.5%", explanation: "Measures overall pricing model fit and value realization speed." },
-        { metric: "Average Revenue Per Paying User (ARPPU)", target: "$12.50", explanation: "Ensures a healthy blend of subscription tiers and optional add-ons." },
-        { metric: "Subscription Renewal Rate (L6M)", target: "82%", explanation: "Tracks long-term product value retention and user satisfaction." }
-      ],
-      gtmStrategy: [
-        "A/B test dynamic paywall messaging based on the user's primary goal (e.g. weight loss vs. muscle gain).",
-        "Offer a limited 7-day full access trial with frictionless in-app cancellation.",
-        "Bundle subscriptions with local neighborhood gym entry passes to reduce customer acquisition cost (CAC)."
       ]
     }
   },
