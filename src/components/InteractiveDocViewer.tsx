@@ -1052,15 +1052,28 @@ export default function InteractiveDocViewer({
 
         <div className="flex items-center gap-2 self-end sm:self-auto shrink-0">
           {project.liveUrl && (
-            <a
+            <motion.a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded bg-neon-green/10 px-3 py-2 font-mono text-xs font-bold text-neon-green hover:bg-neon-green/20 transition-all duration-200"
+              className="flex items-center gap-2 rounded-lg bg-neon-green text-white px-5 py-2.5 font-mono text-xs font-extrabold shadow-[0_4px_12px_rgba(6,95,70,0.3)] hover:bg-neon-green/90 shrink-0 cursor-pointer"
+              title="Launch Live App"
+              animate={{
+                scale: [1, 1.08, 0.98, 1.08, 1, 1],
+              }}
+              transition={{
+                duration: 0.75, // 80 BPM = 0.75s per beat
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+                times: [0, 0.15, 0.3, 0.45, 0.6, 1],
+              }}
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <span className="uppercase tracking-wider text-[10px]">Launch Live</span>
-              <ExternalLink className="h-3.5 w-3.5" />
-            </a>
+              <span className="uppercase tracking-wider text-[11px] font-black">Launch Live</span>
+              <ExternalLink className="h-4 w-4" />
+            </motion.a>
           )}
           
           {project.docUrl && (

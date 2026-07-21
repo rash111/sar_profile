@@ -30,7 +30,9 @@ export default function Hero() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${
+            METRICS.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"
+          }`}
         >
           {METRICS.map((metric, idx) => {
             const cardColor = metric.color.includes("-") ? metric.color.split("-")[1] : metric.color;

@@ -53,13 +53,37 @@ export default function Certifications() {
                       </p>
                     </div>
                     
-                    <button
-                      onClick={() => setShowCertModal(true)}
-                      className="flex items-center gap-1.5 rounded bg-neon-green/10 px-2.5 py-1.5 font-mono text-xs font-black text-neon-green border border-neon-green/20 hover:bg-neon-green/20 transition-all shrink-0 cursor-pointer"
-                    >
-                      <Eye className="h-4 w-4 text-neon-green" />
-                      <span>VIEW CERTIFICATE</span>
-                    </button>
+                    <div className="flex flex-col sm:flex-row gap-2 shrink-0 items-stretch sm:items-center">
+                      <motion.button
+                        onClick={() => setShowCertModal(true)}
+                        className="flex items-center justify-center gap-1.5 rounded bg-slate-100 border border-slate-200 px-3 py-1.5 font-mono text-[11px] font-black text-slate-700 hover:bg-slate-200 transition-all shrink-0 cursor-pointer"
+                      >
+                        <Eye className="h-4 w-4 text-slate-600" />
+                        <span>PREVIEW</span>
+                      </motion.button>
+
+                      {cert.url && (
+                        <motion.a
+                          href={cert.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-1.5 rounded bg-neon-green text-white px-3 py-1.5 font-mono text-[11px] font-black hover:bg-neon-green/90 transition-all shrink-0 cursor-pointer shadow-[0_2px_8px_rgba(6,95,70,0.2)]"
+                          animate={{
+                            scale: [1, 1.06, 0.98, 1.06, 1, 1],
+                          }}
+                          transition={{
+                            duration: 0.75, // 80 BPM
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            ease: "easeInOut",
+                            times: [0, 0.15, 0.3, 0.45, 0.6, 1],
+                          }}
+                        >
+                          <BadgeCheck className="h-4 w-4 text-white" />
+                          <span>VERIFY LIVE ↗</span>
+                        </motion.a>
+                      )}
+                    </div>
                   </div>
 
                   <ul className="space-y-2">
@@ -157,6 +181,36 @@ export default function Certifications() {
                 >
                   <X className="h-5 w-5" />
                 </button>
+                {/* Real Verification Link Banner */}
+                <div className="mb-4 flex flex-col sm:flex-row items-center justify-between gap-3 bg-[#051409]/90 border border-neon-green/35 rounded-xl p-4 shadow-xl">
+                  <div className="flex items-center gap-2.5">
+                    <div className="h-8 w-8 rounded-full bg-neon-green/15 flex items-center justify-center text-neon-green animate-pulse">
+                      <BadgeCheck className="h-5 w-5" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-xs font-mono font-black text-neon-green uppercase tracking-wider">Official Verified Credential</p>
+                      <p className="text-xs text-slate-300">Issued by Airtribe • Credential ID: <span className="font-mono text-neon-green font-black">PY1PKSHJHLLN</span></p>
+                    </div>
+                  </div>
+                  <motion.a
+                    href="https://www.airtribe.live/product-management/certificate/PY1PKSHJHLLN"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-lg bg-neon-green text-white px-5 py-2 font-mono text-xs font-black shadow-[0_4px_12px_rgba(6,95,70,0.4)] hover:bg-neon-green/90 transition-all shrink-0 cursor-pointer"
+                    animate={{
+                      scale: [1, 1.08, 0.98, 1.08, 1, 1],
+                    }}
+                    transition={{
+                      duration: 0.75, // 80 BPM
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      ease: "easeInOut",
+                      times: [0, 0.15, 0.3, 0.45, 0.6, 1],
+                    }}
+                  >
+                    <span>VERIFY AT AIRTRIBE ↗</span>
+                  </motion.a>
+                </div>
 
                 {/* Simulated High-Fidelity Certificate Card matching the green Airtribe look */}
                 <div 
@@ -221,8 +275,9 @@ export default function Certifications() {
                     
                     {/* Date */}
                     <div className="text-left space-y-1">
-                      <span className="block text-[8px] sm:text-[9px] font-mono text-gray-500 uppercase tracking-wider">Issue Date</span>
+                      <span className="block text-[8px] sm:text-[9px] font-mono text-gray-500 uppercase tracking-wider">Issue Date / Credential ID</span>
                       <span className="block text-xs font-semibold text-gray-300 font-display">July 03, 2026</span>
+                      <span className="block text-[10px] font-mono text-neon-green font-bold">ID: PY1PKSHJHLLN</span>
                     </div>
 
                     {/* Signature */}

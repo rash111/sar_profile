@@ -58,4 +58,5 @@ export interface Certification {
   period: string;
   description: string[];
   credentialId?: string;
+  url?: string;
 }

@@ -5,7 +5,7 @@ export const CONTACT_INFO = {
   preferredName: "Sarath Chandar",
   tagline: "Aspiring Product Manager",
   statement: "I build products with empathy, validate with data, and deliver with absolute quality.",
-  about: "From breaking products to building them. I've spent 8+ years at Tekion on the ARC platform, reading PRDs, pushing back on requirements that don't hold up, and mapping how dealerships actually use the product before features ship. That QA lens taught me to think in edge cases, user workflows, and risk. Working shoulder-to-shoulder with PMs and engineers, I picked up the muscle for product strategy, prioritization, and stakeholder management. Now, I am translating that seasoned product judgment and QA rigor into a full-time Product Management role.",
+  about: "From breaking products to building them. I've spent 7+ years at Tekion on the ARC platform, reading PRDs, discussing use-cases with PMs to refine requirements, and mapping how dealerships actually use the product before features ship. That QA lens taught me to think in edge cases, user workflows, and risk. Working shoulder-to-shoulder with PMs and engineers, I picked up the muscle for product strategy, prioritization, and stakeholder management. Now, I am translating that seasoned product judgment and QA rigor into a full-time Product Management role.",
   email: "sarathchandarb@gmail.com",
   phone: "+91 96550 09981",
   location: "Coimbatore / Bengaluru, India",
@@ -17,8 +17,7 @@ export const CONTACT_INFO = {
 export const METRICS = [
   { id: "m1", value: "8+", label: "Years in Enterprise SaaS & QA", desc: "Embedded tightly with Product, Engineering & Design", color: "neon-cyan" },
   { id: "m2", value: "1", label: "Core Platform Owned End-to-End", desc: "Tekion's Automotive Retail Cloud (ARC) Service Module", color: "neon-purple" },
-  { id: "m3", value: "5", label: "Releases per Quarter Supported", desc: "Managing scope, risk, and user-workflow validation", color: "neon-green" },
-  { id: "m4", value: "2", label: "Promotions Earned", desc: "From Associate QA Engineer to Senior SDET at Tekion", color: "neon-pink" }
+  { id: "m3", value: "5", label: "Releases per Quarter Supported", desc: "Managing scope, risk, and user-workflow validation", color: "neon-green" }
 ];
 
 export const HIGHLIGHTS = [
@@ -37,8 +36,8 @@ export const EXPERIENCES: Experience[] = [
     period: "Jan 2019 – Present",
     location: "Bengaluru, India",
     description: [
-      "Review PRDs and user stories alongside PMs, engineers, and designers before each release on the Automotive Retail Cloud (ARC) platform. Successfully flagged 100+ critical product gaps prior to development.",
-      "Own the end-to-end test strategy for ARC Service module releases - evaluating and adjusting scope, highlighting risky product assumptions, and pushing back on requirements that do not hold up to real-world dealership usage.",
+      "Review PRDs and user stories alongside PMs, engineers, and designers before each release on the Automotive Retail Cloud (ARC) platform. Successfully identified few critical gaps prior to development.",
+      "Own the end-to-end test strategy for ARC Service module releases - evaluating and adjusting scope, highlighting risky product assumptions, and discussing use-cases with PMs to align requirements with real-world dealership usage.",
       "Utilize Claude Code, Augment, and Lovable to rapidly prototype automation frameworks, testing tools, and early-stage features before committing core engineering resources.",
       "Designed, built, and maintain the primary regression suite (Selenium, Java, TypeScript) covering business-critical dealer operations and financial transaction workflows.",
       "Promoted twice across the journey, progressing from Associate QA Engineer → QA Engineer → Senior SDET, recognizing strong technical execution and product advocacy."
@@ -161,7 +160,7 @@ export const PROJECTS: Project[] = [
     liveUrl: "https://gymbuddy-149292217442.asia-southeast1.run.app/welcome",
     docUrl: "https://drive.google.com/file/d/1fiWSwglubyI2YvkBJ759D2xzXY5Ffmjs/view?usp=sharing",
     docMockup: {
-      problemStatement: "More than 67% of gym memberships go unused because beginners face extreme gym anxiety, lack clear workout structures, and cannot afford personal trainers ($50-$100/hr). Existing apps act as simple databases of exercises rather than adaptive coaches.",
+      problemStatement: "More than 67% of gym memberships go unused because beginners face extreme gym anxiety, lack clear workout structures, and cannot afford personal trainers (Rs. 2000 - Rs.4000/Mo). Existing apps act as simple databases of exercises rather than adaptive coaches.",
       targetUser: "Alex, 26, a young software professional in Bangalore. Alex wants to get fit but feels overwhelmed inside a crowded gym, doesn't know which exercises to pair, and loses motivation within 2 weeks.",
       userInsights: [
         "Gym anxiety is heavily driven by 'feeling watched' or 'doing the exercise wrong.'",
@@ -612,7 +611,8 @@ export const CERTIFICATIONS: Certification[] = [
     title: "AI-First Product Manager Program",
     provider: "Airtribe",
     period: "Completed July 2026",
-    credentialId: "Airtribe-PM-2026-07-04",
+    credentialId: "PY1PKSHJHLLN",
+    url: "https://www.airtribe.live/product-management/certificate/PY1PKSHJHLLN",
     description: [
       "Advanced program covering User Research, Product Strategy, prioritization frameworks (RICE/Kano), and modern product telemetry using Amplitude.",
       "Specialized training in AI-First Product Development, custom LLM integration, prompt engineering, RAG, and rapid technical prototyping using advanced AI tools.",
